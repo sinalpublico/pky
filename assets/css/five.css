@@ -1,0 +1,81 @@
+/* Exemplo genérico de estilos para um player de vídeo */
+
+/* Estilos globais */
+body, html {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Container do player */
+.video-player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção de aspecto 16:9 para vídeo responsivo */
+}
+
+/* Vídeo dentro do player */
+.video-player video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+/* Controles de reprodução */
+.jw-controls {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.jw-controls .jw-controlbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jw-controls .jw-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.jw-controls .jw-button:hover {
+  color: #ff0000; /* Cor ao passar o mouse */
+}
+
+.jw-controls .jw-progress {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 10px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.jw-controls .jw-progress .jw-buffer {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100%;
+}
+
+.jw-controls .jw-progress .jw-slider {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+}
+
+/* Estilos para fullscreen */
+.jw-controls .jw-button-fullscreen {
+  display: none; /* Exemplo: botão fullscreen não mostrado */
+}
